@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fitness Tracker Web App - Fitness Goals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="Images/logo.jpg" alt="Fitness Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <!-- Close menu button for mobile navigation -->
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="log.html">LOG WORKOUT</a></li>
+                    <li><a href="favourite.html">FAVOURITE WORKOUTS</a></li>
+                    <li><a href="statistics.html">STATISTICS</a></li>
+                    <li><a href="goals.html" class="active">GOALS</a></li>
+                    <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <!-- Menu icon for mobile view -->
+            <i class="fa fa-navicon" onclick="showMenu()"></i>
+        </nav>
+        <h1>Track Your Fitness Goals</h1>
+    </section>
+    
+    <section class="blog-content">
+        <div class="row">
+            <div class="blog-left">
+                <img src="Images/fitnessgoal.jpg" alt="">
+                <h2>Achieve Your Fitness Goals with Our Expert Programs</h2>
+                <p>Whether you want to lose weight, gain muscle, or increase flexibility, our goal-based fitness programs help you stay on track and measure your progress. Choose the program that fits your goals and start working towards them today!</p>
+                <br>
+                <p>Set clear fitness goals, track your progress with our tools, and challenge yourself to reach new milestones. Whether you want to run a marathon or hit a personal best in strength training, we have the tools to help you succeed.</p>
+                <br>
+                <p>With our advanced tracking features, you can monitor everything from your daily activity level to your long-term fitness progress. Stay motivated, challenge yourself, and celebrate every achievement along the way.</p>
+                <br>
+                <p>From cardio to strength training, our goal-setting programs are designed to match your fitness level, so you can work your way up to the next challenge.</p>
+            </div>
+            <div class="blog-right">
+                <h3>Fitness Goal Categories</h3><!-- List of goal categories -->
+                <div><span>Weight Loss</span><span>1</span></div>
+                <div><span>Muscle Gain</span><span>2</span></div>
+                <div><span>Cardio Endurance</span><span>3</span></div>
+                <div><span>Flexibility</span><span>4</span></div>
+                <div><span>Strength Training</span><span>5</span></div>
+                <div><span>Recovery</span><span>6</span></div>
+                <div><span>General Health</span><span>7</span></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="containergoal">
+        <h1 class="h1goal">Fitness Goal Tracking</h1>
+
+        <div class="goal-setting">
+            <h2>Set Your Fitness Goal</h2>
+            <form id="goalForm">
+                <input type="text" id="goalName" placeholder="Goal Name (e.g., Run 10 miles)" required>
+                <input type="number" id="goalTarget" placeholder="Target (e.g., 10 miles, 3000 calories)" required>
+                <!-- Dropdown for goal unit -->
+                <select id="goalUnit">
+                    <option value="miles">Miles</option>
+                    <option value="calories">Calories</option>
+                </select>
+                <button type="submit">Set Goal</button>
+            </form>
+        </div>
+
+        <div class="goal-progress">
+            <h2>Your Current Goal</h2> <!-- Displays current goal details -->
+            <div class="goal-info">
+                <p id="goalDisplayName">No goal set yet</p><!-- Shows current goal name -->
+                <p id="goalDisplayTarget">Target: 0</p> <!-- Shows target amount -->
+                <div class="progress-bar-container"> 
+                    <div id="progress" class="progress"></div><!-- Progress bar -->
+                </div>
+                <p id="goalProgressText">Progress: 0%</p><!-- Shows progress percentage -->
+            </div>
+
+            
+            <div class="progress-update">
+                <input type="number" id="progressInput" placeholder="Enter progress (e.g., 2 miles)">
+                <button onclick="updateProgress()">Update Progress</button>
+            </div>
+        </div>
+
+        <div class="motivational-message">
+            <p id="message">Keep going, you're doing great!</p><!-- Encouraging message -->
+        </div>
+    </div>
+<!-- Footer -->
+    <section class="footer">
+        <!-- About us section -->
+        <h4>About Us</h4>
+        <p>We are a team dedicated to helping you reach your fitness goals, offering the tools and support you need to track your progress and succeed. Whether you want to lose weight, build muscle, or improve your overall health, we’re here to help you achieve your goals.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> for fitness lovers</p>
+    </section>
+<!-- Link to JavaScript file -->
+    <script src="goal.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Gym</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body id="LogIn">
+    <div class="logo-container">
+        <img src="Images/logo.jpg" alt="Gym Logo">
+    </div>
+
+    <div class="auth-container" id="authContainer">
+        <!-- Login Form -->
+        <div id="loginForm">
+            <h1>Login</h1>
+            <form onsubmit="event.preventDefault(); login();">
+                <label for="loginUsername">Username</label>
+                <input type="text" id="loginUsername" name="username" required>
+                
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+            <p>OR</p>
+            <button class="RegBut" onclick="showRegister()">Register</button>
+            <div class="message" id="loginMessage"></div>
+        </div>
+
+        <!-- Registration Form -->
+        <div id="registerForm" style="display: none;">
+            <h1>Register</h1>
+            <form onsubmit="event.preventDefault(); register();">
+                <label for="regUsername">Username</label>
+                <input type="text" id="regUsername" name="username" required>
+                
+                <label for="regEmail">Email</label>
+                <input type="email" id="regEmail" name="email" required>
+                
+                <label for="regPassword">Password</label>
+                <input type="password" id="regPassword" name="password" required>
+                
+                <button type="submit">Register</button>
+            </form>
+            <div class="message" id="registerMessage"></div>
+        </div>
+    </div>
+
+    <script src="Login_&_Registration.js"></script>
+</body>
+</html>

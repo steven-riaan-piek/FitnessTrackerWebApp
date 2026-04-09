@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fitness Tracker Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <!-- Navigation Section -->
+    <section class="Header">
+        <nav>
+            <a href="index.html"><img src="Images/logo.jpg" alt="Fitness Logo"></a>
+            <div class="nav-links" id="navLinks">
+                                <!-- Close menu button for mobile navigation -->
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="log.html">LOG WORKOUT</a></li>
+                    <li><a href="favourite.html">FAVOURITE WORKOUTS</a></li>
+                    <li><a href="statistics.html">STATISTICS</a></li>
+                    <li><a href="goals.html">GOALS</a></li>
+                    <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+                        <!-- Menu icon for mobile view -->
+            <i class="fa fa-navicon" onclick="showMenu()"></i>
+        </nav>
+                <!-- Hero Section ( I will use this multiple times on this website)-->
+        <div class="text-box">
+            <h1>Track Your Fitness Journey</h1>
+            <p>Stay on top of your workouts, set goals, and monitor progress with our Smart Fitness Tracker.</p>
+            <a href="log.html" class="hero-btn">Get Started Now</a>
+        </div>        
+    </section>
+
+    <!-- Workout Plans Section -->
+    <section class="workout-plans">
+        <h1>Workout Plans</h1>
+        <p>Choose from different workout plans tailored to your fitness level.</p>
+        <div class="row">
+            <div class="workout-journey">
+                <h3>Beginner</h3>
+                <p>Start your fitness journey with easy-to-follow workout routines designed for beginners.</p>
+                <img src="Images/Walk.png" alt="Walk">
+            </div>
+            <div class="workout-journey">
+                <h3>Intermediate</h3>
+                <p>Step up your game with more challenging workouts to improve strength and endurance.</p>
+                <img src="Images/Jog.png" alt="Jog">
+            </div>
+            <div class="workout-journey">
+                <h3>Advanced</h3>
+                <p>Take on high-intensity training programs for maximum results and peak performance.</p>
+                <img src="Images/Run.png" alt="Run">
+            </div>
+        </div>
+    </section>
+
+    <section class="workout-cat">    <!-- Workout Categories Section -->
+        <h1>Workout Categories</h1>
+        <p>Choose from different workout types to meet your fitness goals.</p>
+        <div class="row">
+            <div class="workout-cat">
+                <img src="Images/weights.jpg" alt="">
+                <div class="layer">
+                    <h3>STRENGTH TRAINING</h3>
+                </div>
+            </div>
+            <div class="workout-cat">
+                <img src="Images/Pullup.jpg" alt="">
+                <div class="layer">
+                    <h3>BODYWEIGHT EXERCISES</h3>
+                </div>
+            </div>
+            <div class="workout-cat">
+                <img src="Images/Cardio Plan.jpg" alt="">
+                <div class="layer">
+                    <h3>CARDIO</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+
+    <section class="features">
+        <h1>Our Features</h1>
+        <p>Track your progress and stay motivated with our smart tools.</p>
+        <div class="row">
+            <div class="features-track">
+                <img src="Images/Personal Plan.jpg" alt="">
+                <h3>Personalized Plans</h3>
+                <p>Get customized workout and nutrition plans based on your fitness goals.</p>
+            </div>
+            <div class="features-track">
+                <img src="Images/Tracking Plan.png" alt="">
+                <h3>Performance Tracking</h3>
+                <p>Monitor your workouts, calories burned, and progress over time.</p>
+            </div>
+            <div class="features-track">
+                <img src="Images/Community Support.jpg" alt="">
+                <h3>Community Support</h3>
+                <p>Join a fitness community to stay motivated and share your journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="success">
+        <h1>Success Stories</h1>
+        <p>Hear from users who achieved their fitness goals with our app.</p>
+        <div class="row">
+
+                <!-- Success Stories Section -->
+            <div class="success-stories">
+                <img src="Images/Steve.jpg" alt="">
+                <div>
+                    <p>"This app helped me stay consistent with my workouts and track my progress!"</p>
+                    <h3>Steve</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="success-stories">
+                <img src="Images/Brian.jpg" alt="">
+                <div>
+                    <p>"The goal-setting feature kept me on track and motivated every day!"</p>
+                    <h3>Brian</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action Section -->
+    <section class="cta">
+        <h1>Start Your Fitness Journey Today</h1>
+        <a href="Login_&_Registration.html" class="hero-btn">JOIN NOW</a>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Helping you achieve your fitness goals with smart tracking and personalized plans.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> for fitness lovers</p>
+    </section>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

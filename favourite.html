@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fitness Tracker Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+            <!-- Navigation Section -->
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="Images/logo.jpg" alt="Fitness Logo"></a>
+            <div class="nav-links" id="navLinks">
+                                <!-- Close Menu Icon -->
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="log.html">LOG WORKOUT</a></li>
+                    <li><a href="favourite.html" class="active">FAVOURITE WORKOUTS</a></li>
+                    <li><a href="statistics.html">STATISTICS</a></li>
+                    <li><a href="goals.html">GOALS</a></li>
+                    <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <!-- Mobile Menu Icon -->
+            <i class="fa fa-navicon" onclick="showMenu()"></i>
+        </nav>
+        <h1>Types Of Workouts</h1>
+    </section>
+        <!-- Favourite Workouts Section -->
+        <section class="workout-type">
+            <p>Like all your favourite workouts!</p>
+          <!-- Container for dynamically added workout items -->
+            <div class="workout-list" id="workoutList">
+            </div>
+                    <!-- Motivation Button and Message -->
+            <button id="motivationButton">Get Motivated!</button>
+            <p id="motivationMessage"></p>
+        </section>
+    
+            <!-- Link to JavaScript file for functionality -->
+    <script src="favourite.js"></script>
+</body>
+</html>

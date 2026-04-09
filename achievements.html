@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fitness Tracker Web App - Achievements</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <!-- Navigation Bar -->
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="Images/logo.jpg" alt="Fitness Logo"></a>
+            <div class="nav-links" id="navLinks">
+                                <!-- Close Menu Icon -->
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="log.html">LOG WORKOUT</a></li>
+                    <li><a href="favourite.html">FAVOURITE WORKOUTS</a></li>
+                    <li><a href="statistics.html">STATISTICS</a></li>
+                    <li><a href="goals.html">GOALS</a></li>
+                    <li><a href="achievements.html" class="active">ACHIEVEMENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+                        <!-- Mobile Menu Icon -->
+            <i class="fa fa-navicon" onclick="showMenu()"></i>
+        </nav>
+        <h1>Your Achievements & Badges</h1>
+    </section>
+
+    <div class="containerachieve">
+        <h1 class="h1achieve">Gamification & User Engagement</h1>
+
+        <!-- Achievements Section -->
+        <div class="achievements">
+            <h2>Your Achievements</h2>
+            <div class="badge-container" id="badgeContainer">
+                <div class="badge" data-achievement="First Workout Logged">
+                    <img src="Images/day1.png" alt="First Workout">
+                    <p>First Workout Logged</p>
+                </div>
+                <div class="badge" data-achievement="1000 Calories Burned">
+                    <img src="Images/calories.jpg" alt="1000 Calories Burned">
+                    <p>1000 Calories Burned</p>
+                </div>
+                <div class="badge" data-achievement="Half Marathon Completed">
+                    <img src="Images/medal.jpg" alt="Half Marathon Completed">
+                    <p>Half Marathon Completed</p>
+                </div>
+                <div class="badge" data-achievement="5K Run Completed">
+                    <img src="Images/badge-2.jpg" alt="5K Run Completed">
+                    <p>5K Run Completed</p>
+                </div>
+                <div class="badge" data-achievement="Consistent Week">
+                    <img src="Images/badge-3.jpg" alt="Consistent Week">
+                    <p>Consistent Week</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Countdown Timer for Challenges -->
+        <div class="countdown-timer">
+            <h2>Countdown to Your Challenge</h2>
+            <p id="timerTitle">Set Your Challenge Date:</p>
+            <input type="date" id="challengeDate">
+            <button onclick="setChallenge()">Start Countdown</button>
+            <div class="timer">
+                <span id="days">00</span>:<span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
+            <p id="timerMessage">Get ready for the challenge!</p>
+        </div>
+    </div>
+
+        <!-- Footer Section -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>We are a fitness-focused community dedicated to helping individuals of all levels achieve their 
+        health and wellness goals. Our mission is to provide cutting-edge fitness tracking tools and personalized 
+        insights that keep you motivated and on track.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> for fitness lovers</p>
+    </section>
+    <!-- JavaScript File for Achievements Functionality -->
+    <script src="achievements.js"></script>
+</body>
+</html>

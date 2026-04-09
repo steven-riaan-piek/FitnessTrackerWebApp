@@ -1,0 +1,1350 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+.Header {
+    background-image: 
+    linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(Images/gym\ warehouse.jpg);
+    min-height: 100vh;
+    min-width: 100%;
+    background-position: center; 
+    background-size: cover;
+    position: relative;
+   
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+     padding: 8px 12px;
+     position: relative;
+    
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px; 
+    padding: 10px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.nav-links ul li a.active{
+    color: #fff;
+    background-color: #f44336;
+    border-radius: 5px;  
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    width: 10%;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background:#f44336;
+        height: 100hv;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+
+    }
+}
+
+.workout-plans{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+p{
+    color: #777;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.workout-journey{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5;
+
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.workout-journey:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    
+}
+.workout-journey img{
+    display: none;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 38%;
+}
+.workout-journey:hover img{
+    display: block;
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+ 
+
+.workout-cat{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.workout-cat{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.workout-cat img{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+@media(max-width: 700px){
+    .aligned{
+        display:block;
+    }
+}
+
+.workout-type{
+    flex:auto;
+    border-radius: 10px;
+    margin-bottom: 3%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 2%;
+    width: 80% auto;
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+    overflow:auto;
+}
+.workout-type img{
+    width: 70% auto;
+    height: 300px;
+    object-fit:cover;
+    display:block;
+}
+.layers{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    display: flex;
+}
+.layers:hover{
+    background: rgba(226,0,0,0.7);
+
+}
+.layers h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layers:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+.features{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.features-track{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;   
+}
+.features-track img{
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+}
+.features p{
+    padding: 0;
+}
+.features h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.success{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.success-stories{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.success-stories img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.success-stories p{
+    padding: 0;
+}
+.success-stories h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.success-stories  .fa{
+    color: #f44336;
+}
+@media(max-width: 700px){
+    .success-stories img{
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url(Images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+    
+}
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px;
+}
+.fa-heart-o{
+    color: #f44336;
+}
+
+.sub-header {
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), 
+    url("Images/background.jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 100px;
+    margin-bottom: 50%;
+
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+
+}
+.about-col h1{
+    padding-top: 0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+
+.red-btn:hover{
+    color: #fff;
+}
+
+/*blog-content*/
+
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0; 
+}
+
+.blog-left{
+    flex-basis: 65%;
+} 
+.blog-left img{
+    width: 50%;
+    height: 50%;
+}
+.blog-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.blog-left p{
+    color: #999;
+    padding: left;
+}
+
+.blog-right {
+    flex-basis: 32%;
+}
+
+.blog-right h3{
+    background: #f44336;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.blog-right div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px;
+    padding: 10px 20px;
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-form textarea{
+     width: 100%;
+     padding: 10px;
+     margin: 15px 0;
+     box-sizing: border-box;
+     border: none;
+     outline: none;
+     background: #f0f0f0;
+}
+
+.comment-form button{
+    margin: 10px 0;
+}
+.comment-form button:hover{
+    button:hover{
+        background-color: orangered;
+        transition: 1s;
+    }
+    
+}
+@media(max-width: 700px){
+    .sub-headerh1{
+        font-size: 24px;
+    }
+}
+
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe{
+    width: 100%;
+}
+.contact-us{
+    width: 80%;
+    margin: auto;
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col div .fa{
+    font-size: 28px;
+    color: #f44336;
+    margin: 10px;
+    margin-right: 30px;
+}
+.contact-col div p{
+    padding: 0;
+
+}
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: px;
+    color: #555;
+    font-weight: 400;
+}
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box  ;
+}
+
+
+/* This is where i began doing the workout container */
+.containerlog {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.h1log {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: orangered;
+    transition: 1s;
+}
+.log-workout-button{
+    width: 80%;
+}
+
+.workout-list {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.workout-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin: 0; 
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.workout-item:hover {
+    transform: scale(1.05);
+}
+
+.workout-item span {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.workout-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.workout-item .fa-heart, .workout-item .fa-heart-o {
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.workout-item .fa-heart-o:hover {
+    color: red;
+}
+
+.workout-type {
+    padding: 20px;
+    text-align: center;
+}
+
+.workout-type h1 {
+    margin-bottom: 10px;
+}
+
+.workout-type p {
+    margin-bottom: 20px;
+}
+
+
+.containerstat {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+
+.h1stat {
+    text-align: center;
+    color: #333;
+}
+
+
+.stats-summary {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.stats-summary div {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+}
+
+.stats-summary h3 {
+    color: #333;
+}
+
+.chart-container {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.chart-container canvas {
+    width: 100%;
+    height: 400px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: orangered;
+    transition: 1s;
+}
+
+
+
+/* this is the goal section */
+
+.containergoal {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.h1goal{
+    text-align: center;
+    color: #333;
+}
+
+/* Goal Setting Form Styles */
+.goal-setting {
+    margin-bottom: 30px;
+}
+
+.goal-setting h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+input, select {
+    padding: 12px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 80%;
+}
+button:hover{
+    background-color: orangered;
+    transition: 1s;
+}
+
+.goal-progress {
+    text-align: center;
+}
+
+.goal-progress h2 {
+    margin-bottom: 15px;
+}
+
+.goal-info p {
+    font-size: 18px;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    width: 80%;
+    height: 25px;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: red;
+    width: 0%; 
+    transition: width 0.3s ease-in-out;
+}
+
+
+.motivational-message {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+#motivationButton{
+    max-width: 37%;
+}
+
+
+/* Achievement Section Styles */
+.containerachieve {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.h1achieve {
+    text-align: center;
+    color: #333;
+}
+
+.achievements {
+    margin-bottom: 40px;
+}
+
+.achievements h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.badge-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    width: 150px; 
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.badge.completed {
+    background-color: #d4edda; 
+    border-color: #28a745;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+}
+
+.badge:not(.completed) {
+    background-color: #e0e0e0; 
+    opacity: 0.6; 
+}
+
+.badge img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.badge p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.countdown-timer {
+    text-align: center;
+}
+
+.countdown-timer h2 {
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 40px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.timer span {
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+#timerMessage {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+}
+
+.workout-list {
+    text-align: center; 
+    margin: 20px auto;  
+    max-width: 500px;   
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.workout-list h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.workout-list p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.workout-list ul {
+    list-style: none;  
+    padding: 0;
+}
+
+.workout-list li {
+    font-size: 16px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    background-color: #ddd;
+    border-radius: 10px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 30%;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 25%;
+    max-width: 20%;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out; 
+}
+
+.progress-update{
+    max-width: 50%;
+    display:block;
+    align-items: center;
+    margin-left: 25%;
+}
+
+.containerachieve {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f4f4f4;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.badge img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.countdown-timer {
+    margin-top: 30px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timer {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.countdown-timer input {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.countdown-timer button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.countdown-timer button:hover {
+    background-color: orangered;
+    transition: 1s;
+}
+
+.favorite-icon {
+    font-size: 24px;
+    color: gray;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.favorite-icon.active {
+    color: red;
+}
+
+.interactive-features {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.interactive-features button {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 5px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.interactive-features button:hover {
+    background-color: orangered;
+    transition: 1s;
+}
+
+#reminderText {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@keyframes dropIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+#LogIn {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(Images/gym\ warehouse.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    animation: backgroundAnimation 30s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.logo-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    animation: dropIn 0.6s ease-out;
+    margin-bottom: 30px;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+    transform: scale(1.05);
+}
+
+.auth-container {
+    background: rgb(190, 186, 186);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    animation: dropIn 0.6s ease-out;
+}
+
+.auth-container h1 {
+    color: red;
+    margin-bottom: 30px;
+}
+
+.auth-container h2 {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container label {
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.auth-container input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.auth-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: red;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.auth-container button:hover {
+    background: orangered;
+    transform: scale(1.05);
+}
+
+.RegBut {
+    background-color: transparent;
+    border-color: transparent;
+    margin-bottom: 27px;
+    margin-top: 5px;
+}
+
+.RegBut:hover {
+    color: red;
+    border-bottom: 3px solid red;
+}
+
+.message {
+    color: #555;
+    margin-top: 10px;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 550px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.stats-summary {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.stats-summary div {
+    text-align: center;
+}
+
+.stats-summary h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.stats-summary p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #c71212;
+}
+
+form {
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.form button:hover{
+     background-color: orangered;
+    transition: 1s;
+}
+
+.print {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.print {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    max-width: 50%;
+    margin-left: 25%;
+}
+
+
+

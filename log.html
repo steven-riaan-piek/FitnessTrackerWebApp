@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fitness Tracker Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="log.js"></script>
+</head>
+<body>
+        <!-- Navigation Section -->
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="Images/logo.jpg" alt="Fitness Logo"></a>
+            <div class="nav-links" id="navLinks">
+                                <!-- Close menu button for mobile navigation -->
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="log.html" class="active">LOG WORKOUT</a></li>
+                    <li><a href="favourite.html">FAVOURITE WORKOUTS</a></li>
+                    <li><a href="statistics.html">STATISTICS</a></li>
+                    <li><a href="goals.html">GOALS</a></li>
+                    <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+                        <!-- Menu icon for mobile view -->
+            <i class="fa fa-navicon" onclick="showMenu()"></i>
+        </nav>
+        <h1>Start Logging Your Workout</h1>
+    </section>
+
+        <!-- About Section -->
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>Your Fitness, Our Mission</h1>
+                <p>At Smart Fitness Tracker, our mission is to provide you with the most intuitive and engaging fitness app that empowers you to reach your goals. Whether you're a beginner just starting your fitness journey or a seasoned athlete aiming for new personal bests, we're here to support you every step of the way.</p>
+                <p>We offer personalized workout plans, detailed tracking tools, and a motivating community to keep you on track and excited. Our app integrates workout logs, progress tracking, goal setting, and rewards to ensure you stay motivated and focused.</p>
+            
+            </div>
+            <div class="about-col">
+                <img src="Images/warmpup.png" alt="About Us Image">
+            </div>
+        </div>
+    </section>
+    <section>   
+
+            <!-- Workout Logging Form -->
+    <div class="containerlog">
+        <h1 class="h1log">Log Your Workout</h1>
+
+        <form id="workoutForm">
+            <input type="text" id="workoutType" placeholder="Workout Type (e.g. Running)" required>
+            <input type="number" id="duration" placeholder="Duration (in minutes)" required>
+            <input type="number" id="calories" placeholder="Calories Burned" required>
+            <input type="date" id="date" required>
+            <button type="submit" class="log-workout-button">Log Workout</button>
+        </form>
+
+            <!-- Logged Workouts Display -->
+        <div class="workout-list" id="workoutList">
+            <h3>Logged Workouts</h3>
+        </div>
+                    <!-- Print Summary Button -->
+        <div class="print">
+            <button id="printSummaryButton" >Print Workout Summary</button>
+        </div>
+        
+
+    </div>
+    </section>
+
+        <!-- Footer Section -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>We are committed to helping individuals of all fitness levels achieve their goals and improve their health. Our app is designed with a focus on ease of use, interactivity, and fun, making your fitness journey a rewarding experience.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> for fitness lovers</p>
+    </section>
+
+        <!-- JavaScript for Navigation Menu Toggle -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

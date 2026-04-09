@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fitness Tracker Web App - Courses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+        <!-- Sub-header section containing navigation -->
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="Images/logo.jpg" alt="Fitness Logo"></a>
+            <div class="nav-links" id="navLinks">
+                 <!-- Close menu button for mobile navigation -->
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="log.html">LOG WORKOUT</a></li>
+                    <li><a href="favourite.html">FAVOURITE WORKOUTS</a></li>
+                    <li><a href="statistics.html" class="active">STATISTICS</a></li>
+                    <li><a href="goals.html">GOALS</a></li>
+                    <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+             <!-- Menu icon for mobile view -->
+            <i class="fa fa-navicon" onclick="showMenu()"></i>
+        </nav>
+        <h1>Your Fitness Statistics</h1>
+    </section>
+
+        <!-- Feature explanation section -->
+    <div class="features">
+        <h1>Fitness Statistics We Track</h1>
+        <p>We offer a wide range of statistics to help you track and analyze your fitness progress. From your daily workouts to long-term goals, we capture all the essential data to help you improve and reach your full potential.</p>
+    </div>
+
+    <section class="workout-plans">
+        <h1>Track Your Performance with Our Tools</h1>
+        <p>Our fitness tracker offers a variety of tools to monitor your progress and stay motivated. Whether it's your strength, endurance, or overall fitness level, we make it easy for you to see how far you've come.</p>
+        
+        <div class="row">
+            <div class="workout-journey">
+                <h3>Workout Frequency</h3>
+                <p>This statistic tracks the number of days per week you exercise, helping you understand your consistency and commitment to your fitness goals.</p>
+            </div>
+            <div class="workout-journey">
+                <h3>Calories Burned</h3>
+                <p>We track the number of calories you burn during each workout, giving you a clear picture of how your body is using energy. This helps you adjust your workouts to meet specific fitness goals, such as weight loss or muscle gain.</p>
+            </div>
+            <div class="workout-journey">
+                <h3>Workout Duration</h3>
+                <p>This statistic provides insight into the total time spent on your workouts, helping you assess whether you're pushing yourself enough or need to increase the intensity.</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Summary of key statistics -->
+    <div class="stats-summary">
+        <div>
+            <h3>Total Workouts Logged</h3>
+            <p id="totalWorkouts">0</p>
+        </div>
+        <div>
+            <h3>Total Calories Burned</h3>
+            <p id="totalCalories">0</p>
+        </div>
+        <div>
+            <h3>Average Workout Duration (minutes)</h3>
+            <p id="avgDuration">0</p>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <h3>Workout Trend (Calories Burned)</h3>
+        <canvas id="workoutChart" style="max-height: 300px; max-width: 500px;"></canvas>
+    </div>
+    
+    <div class="chart-container">
+        <h3>Workout Type Distribution</h3>
+        <canvas id="typeChart" style="max-height: 300px; max-width: 500px;"></canvas>
+    </div>
+
+        <!-- Form for logging workouts -->
+    <form id="workoutForm">
+                <!-- Input fields for workout details -->
+        <input type="text" id="workoutType" placeholder="Workout Type" required>
+        <input type="number" id="duration" placeholder="Duration (minutes)" required>
+        <input type="number" id="calories" placeholder="Calories Burned" required>
+        <input type="date" id="date" required>
+        <button type="submit">Log Workout</button>
+    </form>
+
+    <script src="statistics.js"></script>
+</body>
+</html>
+
+
